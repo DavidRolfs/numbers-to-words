@@ -9,14 +9,29 @@ namespace NumbersToWordsProject.Objects
   {
     public string Converter(int userInput)
     {
-      int[] numbers = {1, 2, 3, 4, 5, 6, 7, 8, 9};
-      string[] numberNames = {"one", "two", "three", "four", "five", "six", "seven", "eight", "nine"};
+      int[] singleNumbers = {1, 2, 3, 4, 5, 6, 7, 8, 9};
+      int[] teenNumbers = {10, 11, 12, 13, 14, 15, 16, 17, 18, 19};
+      string[] singleNumberNames = {"one", "two", "three", "four", "five", "six", "seven", "eight", "nine"};
+      string[] teenNumberNames = {"ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen"};
 
-      for(int i = 0; i < numbers.Length; i++)
+      if (userInput < 10)
       {
-        if(userInput == numbers[i])
+        for(int i = 0; i < singleNumbers.Length; i++)
         {
-          return numberNames[i];
+          if(userInput == singleNumbers[i])
+          {
+            return singleNumberNames[i];
+          }
+        }
+      }
+      else if(userInput < 20)
+      {
+        for(int i = 0; i < teenNumbers.Length; i++)
+        {
+          if(userInput == teenNumbers[i])
+          {
+            return teenNumberNames[i];
+          }
         }
       }
       return "error";

@@ -13,5 +13,12 @@ namespace NumbersToWordsTester
       NumbersToWords newNumbersToWords = new NumbersToWords();
       Assert.Equal("one", newNumbersToWords.Converter(1));
     }
+    [Fact]
+    public void DoubleDigitNumberToWord_ReturnWord()
+    {
+      NumbersToWords newNumbersToWords = new NumbersToWords();
+      Assert.Equal("thirteen", newNumbersToWords.Converter(13));
+    }
+
   }
 }
